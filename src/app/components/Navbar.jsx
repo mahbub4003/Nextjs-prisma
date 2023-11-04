@@ -37,7 +37,7 @@ const Page = () => {
           <Link href={"/about"}>About</Link>
         </div>
 
-        {/* {cookie ? (
+        {cookie ? (
           <div className="flex justify-between items-center w-[20%]">
             <button
               onClick={logoutHandler}
@@ -50,7 +50,7 @@ const Page = () => {
           <div className="flex justify-between items-center w-[20%]">
             <Link href={"/login"}>Login</Link>
           </div>
-        )} */}
+        )}
       </div>
     );
 
