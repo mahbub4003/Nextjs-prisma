@@ -1,7 +1,9 @@
+import ServicesCom from "@/app/components/ServicesCom";
+
 const Services = () => {
   return (
     <div>
-      <h1>services page</h1>
+      <ServicesCom />
     </div>
   );
 };

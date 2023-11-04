@@ -1,7 +1,9 @@
+import Contactcom from "../components/Contact";
+
 const Contact = () => {
   return (
     <div>
-      <h1>contact page</h1>
+      <Contactcom />
     </div>
   );
 };
