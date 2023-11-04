@@ -4,7 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [cookie, setCookie] = useState(false);
   const [cookies, removeCookie] = useCookies(["token"]);
   const router = useRouter();
@@ -57,4 +57,4 @@ const page = () => {
   return <>{navMenu}</>;
 };
 
-export default page;
+export default Page;
