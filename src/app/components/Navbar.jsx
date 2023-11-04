@@ -2,17 +2,14 @@
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Cookies from "js-cookie";
-import { useState } from "react";
 
 const Page = () => {
-  const [cookie, setCookie] = useState(false);
   const router = useRouter();
   const path = usePathname();
 
   const logoutHandler = () => {
     Cookies.remove("token");
     router.replace("/login");
-    setCookie(true);
   };
 
   let navMenu =
@@ -33,20 +30,18 @@ const Page = () => {
           <Link href={"/about"}>About</Link>
         </div>
 
-        {!cookie ? (
-          <div className="flex justify-between items-center w-[20%]">
-            <button
-              onClick={logoutHandler}
-              className=" bg-[#8b5a2e] py-1 px-4 text-white font-bold rounded hover:bg-[#9b6a40] duration-500"
-            >
-              Logout
-            </button>
-          </div>
-        ) : (
-          <div className="flex justify-between items-center w-[20%]">
-            <Link href={"/login"}>Login</Link>
-          </div>
-        )}
+        <div className="flex justify-between items-center w-[20%]">
+          <button
+            onClick={logoutHandler}
+            className=" bg-[#8b5a2e] py-1 px-4 text-white font-bold rounded hover:bg-[#9b6a40] duration-500"
+          >
+            Logout
+          </button>
+        </div>
+
+        <div className="flex justify-between items-center w-[20%]">
+          <Link href={"/login"}>Login</Link>
+        </div>
       </div>
     );
 
