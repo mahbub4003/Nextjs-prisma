@@ -1,5 +1,4 @@
 const Blog = ({ blog }) => {
-  console.log("blog", blog.createdAt);
   return (
     <>
       <div>

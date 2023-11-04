@@ -10,7 +10,7 @@ const Blogs = async () => {
   const blogs = await getData();
   return (
     <div>
-      <BlogsList blogs={blogs} />
+      <BlogsList title={"Our blogs"} blogs={blogs} />
     </div>
   );
 };
