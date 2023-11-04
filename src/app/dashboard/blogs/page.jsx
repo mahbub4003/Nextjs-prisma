@@ -8,7 +8,6 @@ const getData = async () => {
 
 const Blogs = async () => {
   const blogs = await getData();
-  console.log(blogs);
   return (
     <div>
       <BlogsList blogs={blogs} />
