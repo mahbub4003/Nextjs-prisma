@@ -1,5 +1,6 @@
 import ServicesCom from "@/app/components/ServicesCom";
 import { PrismaClient } from "@prisma/client";
+
 const getData = async () => {
   const prisma = new PrismaClient();
   const result = await prisma.services.findMany();

@@ -1,7 +1,5 @@
-import parse from "html-react-parser";
 import Service from "./Service";
 const ServicesCom = ({ services }) => {
-  // console.log(services[0].title);
   return (
     <div>
       <section className="bg-white dark:bg-gray-900">

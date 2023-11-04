@@ -1,5 +1,4 @@
 "use client";
-import { useCookies } from "react-cookie";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Cookies from "js-cookie";
@@ -7,10 +6,9 @@ import { useState } from "react";
 
 const Page = () => {
   const [cookie, setCookie] = useState(false);
-  const [cookies, removeCookie] = useCookies(["token"]);
   const router = useRouter();
   const path = usePathname();
-  console.log(cookie);
+
   const logoutHandler = () => {
     Cookies.remove("token");
     router.replace("/login");

@@ -1,5 +1,6 @@
 import BlogsList from "@/app/components/BlogsList";
 import { PrismaClient } from "@prisma/client";
+import { NextResponse } from "next/server";
 const getData = async () => {
   const prisma = new PrismaClient();
   const result = await prisma.blogs.findMany();
