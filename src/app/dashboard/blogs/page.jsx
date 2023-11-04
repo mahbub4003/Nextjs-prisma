@@ -1,4 +1,4 @@
-import BlogsList from "@/components/BlogsList";
+import BlogsList from "@/app/components/BlogsList";
 
 const Blogs = () => {
   return (

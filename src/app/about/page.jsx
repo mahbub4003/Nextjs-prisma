@@ -1,5 +1,5 @@
-import States from "@/components/States";
-import TeamMembers from "@/components/TeamMembers";
+import States from "../components/States";
+import TeamMembers from "../components/TeamMembers";
 
 const About = () => {
   return (
