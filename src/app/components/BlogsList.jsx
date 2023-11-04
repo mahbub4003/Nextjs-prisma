@@ -1,7 +1,7 @@
 import React from "react";
 import Blog from "./Blog";
 
-const BlogsList = () => {
+const BlogsList = ({ blogs }) => {
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-10 mx-auto">
@@ -31,7 +31,9 @@ const BlogsList = () => {
         <hr className="my-8 border-gray-200 dark:border-gray-700" />
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-          <Blog />
+          {blogs?.map((blog) => {
+            return <Blog key={blog.id} blog={blog} />;
+          })}
         </div>
       </div>
     </section>

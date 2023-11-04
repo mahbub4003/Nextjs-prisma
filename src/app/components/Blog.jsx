@@ -1,12 +1,11 @@
-import React from "react";
-
-const Blog = () => {
+const Blog = ({ blog }) => {
+  console.log("blog", blog.createdAt);
   return (
     <>
       <div>
         <img
           className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-          src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+          src={blog.img}
           alt=""
         />
 
@@ -14,13 +13,11 @@ const Blog = () => {
           <span className="text-blue-500 uppercase">category</span>
 
           <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-            What do you want to know about UI
+            {blog.title}
           </h1>
 
           <p className="mt-2 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est
-            asperiores vel, ab animi recusandae nulla veritatis id tempore
-            sapiente
+            {blog.short_des}
           </p>
 
           <div className="flex items-center justify-between mt-4">
@@ -29,99 +26,11 @@ const Blog = () => {
                 href="#"
                 className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500"
               >
-                John snow
+                {blog.bloger_name}
               </a>
 
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                February 1, 2022
-              </p>
-            </div>
-
-            <a
-              href="#"
-              className="inline-block text-blue-500 underline hover:text-blue-400"
-            >
-              Read more
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <img
-          className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-          src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-          alt=""
-        />
-
-        <div className="mt-8">
-          <span className="text-blue-500 uppercase">category</span>
-
-          <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-            All the features you want to know
-          </h1>
-
-          <p className="mt-2 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est
-            asperiores vel, ab animi recusandae nulla veritatis id tempore
-            sapiente
-          </p>
-
-          <div className="flex items-center justify-between mt-4">
-            <div>
-              <a
-                href="#"
-                className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500"
-              >
-                Arthur Melo
-              </a>
-
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                February 6, 2022
-              </p>
-            </div>
-
-            <a
-              href="#"
-              className="inline-block text-blue-500 underline hover:text-blue-400"
-            >
-              Read more
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <img
-          className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-          src="https://images.unsplash.com/photo-1597534458220-9fb4969f2df5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
-          alt=""
-        />
-
-        <div className="mt-8">
-          <span className="text-blue-500 uppercase">category</span>
-
-          <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-            Which services you get from Meraki UI
-          </h1>
-
-          <p className="mt-2 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est
-            asperiores vel, ab animi recusandae nulla veritatis id tempore
-            sapiente
-          </p>
-
-          <div className="flex items-center justify-between mt-4">
-            <div>
-              <a
-                href="#"
-                className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500"
-              >
-                Tom Hank
-              </a>
-
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                February 19, 2022
+                {blog.createdAt.toString()}
               </p>
             </div>
 

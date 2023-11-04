@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model user{
+  id BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  firstName String @db.VarChar(100)
+  lastName String @db.VarChar(100)
+  mobile String @db.VarChar(100)
+  email String @db.VarChar(100) @unique
+  password String @db.VarChar(100)
+  registeredAt DateTime @default(now()) @db.Timestamp(0)
+  latLogin DateTime @default(now()) @db.Timestamp(0)
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamp(0)
+}
+
+
+
+model blogs{
+  id Int @id @default(autoincrement()) @db.UnsignedInt
+  title String @db.VarChar(100)
+  short_des String @db.VarChar(100)
+  long_des String @db.VarChar(500)
+  img String
+  bloger_name String
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamp(0)
+}
+
+model services{
+  id Int @id @default(autoincrement()) @db.UnsignedInt
+  icon String
+  title String @db.VarChar(100)
+  des String @db.VarChar(500)
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamp(0)
+}
+model contact{
+  id Int @id @default(autoincrement()) @db.UnsignedInt
+  email String @db.LongText
+  office String @db.LongText
+  phone String @db.LongText
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamp(0)
+}
