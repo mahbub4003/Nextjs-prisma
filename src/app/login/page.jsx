@@ -17,7 +17,6 @@ const Login = () => {
           body: JSON.stringify({ email, password }),
           headers: { "Content-type": "application/json" },
         });
-        console.log(result);
         if (result.status === 200) {
           router.replace("/dashboard/blogs");
         } else {

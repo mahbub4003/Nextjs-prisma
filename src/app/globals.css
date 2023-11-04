@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .before-component-1 {
+    background-image: linear-gradient(to bottom right, red, yellow);
+    position: absolute;
+    width: 10px;
+    height: 295px;
   }
-}
+  .bg-size {
+    background-size: 500px;
+  }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .before-component-2 {
+    background-image: linear-gradient(to bottom right, #e2d9d7, #ba704f);
+    position: absolute;
+    width: 10px;
+    height: 295px;
+    right: 0px;
+  }
+  .smal-ldev-before-1::before {
+    position: absolute;
+    bottom: -200px;
+  }
+  .shadow {
+    box-shadow: 10px 10px 10px red;
+    border-radius: 50%;
+  }
 }

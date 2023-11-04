@@ -2,6 +2,7 @@
 import { useCookies } from "react-cookie";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import Cookies from "js-cookie";
 import { useState } from "react";
 
 const Page = () => {
@@ -9,14 +10,11 @@ const Page = () => {
   const [cookies, removeCookie] = useCookies(["token"]);
   const router = useRouter();
   const path = usePathname();
-  console.log(cookies["token"]);
-  if (cookies["token" !== undefined]) {
-    setCookie(true);
-  }
-
+  console.log(cookie);
   const logoutHandler = () => {
-    removeCookie("token");
+    Cookies.remove("token");
     router.replace("/login");
+    setCookie(true);
   };
 
   let navMenu =
@@ -37,7 +35,7 @@ const Page = () => {
           <Link href={"/about"}>About</Link>
         </div>
 
-        {cookie ? (
+        {!cookie ? (
           <div className="flex justify-between items-center w-[20%]">
             <button
               onClick={logoutHandler}

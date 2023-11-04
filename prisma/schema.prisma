@@ -38,9 +38,9 @@ model blogs{
 
 model services{
   id Int @id @default(autoincrement()) @db.UnsignedInt
-  icon String
   title String @db.VarChar(100)
   des String @db.VarChar(500)
+ icon String
   createdAt DateTime @default(now()) @db.Timestamp(0)
   updatedAt DateTime @default(now()) @updatedAt @db.Timestamp(0)
 }
