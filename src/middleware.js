@@ -18,7 +18,7 @@ export async function middleware(req, res) {
       console.log(cookies().get("unauthorized"));
       return NextResponse.json(
         { status: "fail", data: "unauthorized" },
-        { status: 401, headers: { "set-cookies": "unauthorized=401" } }
+        { status: 401 }
       );
     }
   }
