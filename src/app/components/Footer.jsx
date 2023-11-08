@@ -136,7 +136,7 @@ const Footer = () => {
                     href="#"
                     className="block mt-2 text-sm  dark:text-gray-400 hover:underline"
                   >
-                    Meraki UI
+                    Easy to read
                   </a>
                 </div>
 

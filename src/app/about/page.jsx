@@ -3,10 +3,10 @@ import TeamMembers from "../components/TeamMembers";
 
 const About = () => {
   return (
-    <div>
+    <>
       <TeamMembers />
       <States />
-    </div>
+    </>
   );
 };
 

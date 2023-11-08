@@ -3,8 +3,8 @@ import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
 const getData = async () => {
   const prisma = new PrismaClient();
-  const result = await prisma.blogs.findMany();
-  return result;
+  const data = await prisma.blogs.findMany();
+  return data;
 };
 
 const Blogs = async () => {

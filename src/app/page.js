@@ -16,11 +16,11 @@ const getData = async () => {
 export default async function Home() {
   const blogs = await getData();
   return (
-    <>
+    <div>
       <Hero />
       <FeatureBlogs />
       <BlogsList title={"recent posts"} blogs={blogs} />
       <Subcribe />
-    </>
+    </div>
   );
 }

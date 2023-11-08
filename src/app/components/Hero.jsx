@@ -6,7 +6,7 @@ const Hero = () => {
           The best place to discover, read{"  "}
           <span className="border border-solid border-black rounded-full px-[5px] bg-[#77dada3d]">
             &
-          </span>{" "}
+          </span>
           engage with blog.
         </h1>
         <hr className="sm:hidden w-[100%] h-2 opacity-100 bg-white" />

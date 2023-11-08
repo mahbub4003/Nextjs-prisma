@@ -5,14 +5,14 @@ import Cookies from "js-cookie";
 import { useState } from "react";
 
 const Page = () => {
-  const [cookie, setCookie] = useState(false);
+  const [cookie, setCookies] = useState(false);
   const router = useRouter();
   const path = usePathname();
 
   const logoutHandler = () => {
     Cookies.remove("token");
     router.replace("/login");
-    setCookie(true);
+    setCookies(true);
   };
 
   let navMenu =

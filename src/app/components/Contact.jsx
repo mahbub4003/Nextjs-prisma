@@ -2,8 +2,8 @@ import { PrismaClient } from "@prisma/client";
 import parse from "html-react-parser";
 const getData = async () => {
   const prisma = new PrismaClient();
-  const result = await prisma.contact.findMany();
-  return result;
+  const data = await prisma.contact.findMany();
+  return data;
 };
 
 const Contactcom = async () => {

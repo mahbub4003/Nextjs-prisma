@@ -19,7 +19,7 @@ const States = () => {
             <h3 className="font-bold text-7xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
                 {" "}
-                6+{" "}
+                6+{"  "}
               </span>
             </h3>
             <p className="mt-4 text-xl font-medium text-gray-900">

@@ -1,4 +1,4 @@
-const Service = ({ serv }) => {
+const Service = ({ service }) => {
   return (
     <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
       <span className="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
@@ -19,10 +19,10 @@ const Service = ({ serv }) => {
       </span>
 
       <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white">
-        {serv.title}
+        {service.title}
       </h1>
 
-      <p className="text-gray-500 dark:text-gray-300">{serv.des}</p>
+      <p className="text-gray-500 dark:text-gray-300">{service.des}</p>
 
       <a
         href="#"

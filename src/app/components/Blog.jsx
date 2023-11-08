@@ -5,7 +5,7 @@ const Blog = ({ blog }) => {
         <img
           className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
           src={blog.img}
-          alt=""
+          alt="Blog Image"
         />
 
         <div className="mt-8">

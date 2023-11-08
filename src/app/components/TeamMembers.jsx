@@ -2,7 +2,7 @@ import TeamMember from "./TeamMember";
 
 const TeamMembers = () => {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900 ">
       <div className="container px-6 py-8 mx-auto">
         <h2 className="text-2xl font-semibold text-center bg-gray-800 bg-opacity-20 text-gray-800 capitalize lg:text-3xl dark:text-white">
           Our Team

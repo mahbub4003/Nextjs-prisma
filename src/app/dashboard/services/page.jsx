@@ -3,8 +3,8 @@ import { PrismaClient } from "@prisma/client";
 
 const getData = async () => {
   const prisma = new PrismaClient();
-  const result = await prisma.services.findMany();
-  return result;
+  const data = await prisma.services.findMany();
+  return data;
 };
 
 const Services = async () => {

@@ -77,7 +77,7 @@ const FeatureBlog = () => {
         </span>
 
         <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
-          Easy to customiztions
+          Easy to Read
         </h1>
 
         <p className="text-gray-500 dark:text-gray-300">
@@ -125,7 +125,7 @@ const FeatureBlog = () => {
         </span>
 
         <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
-          Simple & clean designs
+          Simple & clean articles
         </h1>
 
         <p className="text-gray-500 dark:text-gray-300">

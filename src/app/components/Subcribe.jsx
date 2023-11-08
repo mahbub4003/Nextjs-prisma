@@ -15,7 +15,7 @@ const Subcribe = () => {
 
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 md:text-gray-400">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Consectetur obcaecati odio
+            Consectetur obcaecati odioa
           </p>
         </div>
       </div>

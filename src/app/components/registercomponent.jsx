@@ -24,6 +24,7 @@ const Registercomponent = ({ data }) => {
               <img
                 src="https://res.cloudinary.com/macxenon/image/upload/v1631570592/Run_-_Health_qcghbu.png"
                 className="btn-"
+                alt="Image"
               />
             </div>
           </div>
